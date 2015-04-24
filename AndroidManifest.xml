@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Project ... Final Project
+	File ..	... AndroidManifest.xml
+	Name ..	... Gardner Seth Wilkenfeld
+	Credits: Much of the included code comes from the Android API and other internet resources
+		including answers to similar problems on StackOverflow
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wifidirectcamera"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+	<uses-feature android:name="android.hardware.wifi.direct" android:required="true"/>
+    <!--
+    		1. Request permission to use the Wi-Fi hardware on the device and
+    		also declare your application to have the correct minimum SDK
+    		version in the Android manifest:
+    -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--	Camera Features - Your application must also declare use of camera features -->
+    <uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.camera" />
+
+	<!--
+			Storage Permission - If your application saves images or videos to
+			the device's external storage (SD Card), you must also specify this
+			in the manifest.
+	-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.wifidirectcamera.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Used for transferring files  after a successful connection -->
+        <service android:enabled="true" android:name=".FileTransferService" />
+
+	</application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Project ... Final Project
+	File ..	... strings.xml
+	Name ..	... Gardner Seth Wilkenfeld
+	Credits: Much of the included code comes from the Android API and other internet resources
+		including answers to similar problems on StackOverflow
+-->
+
+<resources>
+
+    <string name="app_name">Camera Share</string>
+    <string name="action_settings">Settings</string>
+    <string name="enable_p2p_button">Enable P2P</string>
+    <string name="discover_peers_button">Discover Peers</string>
+    <string name="p2p_off_warning">P2P Disabled</string>
+    <string name="device_name">Device Name</string>
+    <string name="my_title">My Device</string>
+    <string name="peers_title">Peer Devices</string>
+    <string name="device_icon">Device Icon</string>
+    <string name="device_details">Device Details</string>
+    <string name="get_camera_button">Gallery</string>
+    <string name="get_gallery_button">Camera</string>
+    <string name="disconnect_peer_button">Disconnect</string>
+    
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Project ... Final Project
+	File ..	... device_list_view.xml
+	Name ..	... Gardner Seth Wilkenfeld
+	Credits: Much of the included code comes from the Android API and other internet resources
+		including answers to similar problems on StackOverflow
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" >
+
+    <ImageView
+        android:id="@+id/ic_device_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/device_icon"
+        android:src="@drawable/ic_device_icon" />
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ic_device_icon"
+        android:text="@string/device_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/device_details"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/device_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/device_details"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
